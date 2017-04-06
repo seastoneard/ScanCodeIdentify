@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch">
+
+    <com.zhh.scancodeidentify.zbar.ZBarView
+        android:id="@+id/zbarview"
+        style="@style/MatchMatch"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText=""
+        app:qrcv_barcodeRectHeight="120dp"
+        app:qrcv_rectWidth="200dp"
+        app:qrcv_borderColor="#C9C9C9"
+        app:qrcv_borderSize="0px"
+        app:qrcv_cornerColor="@color/colorAccent"
+        app:qrcv_cornerLength="15dp"
+        app:qrcv_cornerSize="1.5dp"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="true"
+        app:qrcv_isShowDefaultScanLineDrawable="false"
+        app:qrcv_isShowTipBackground="true"
+        app:qrcv_isShowTipTextAsSingleLine="false"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#66000000"
+        app:qrcv_qrCodeTipText="将二维码/条码放入框内，即可自动扫描"
+        app:qrcv_scanLineColor="@color/colorAccent"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="2dp"
+        app:qrcv_toolbarHeight="56dp"
+        app:qrcv_topOffset="90dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical">
+
+        <!--左侧按钮-->
+        <LinearLayout
+            android:id="@+id/line_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center">
+            <!--  android:background="?android:attr/selectableItemBackground"-->
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@mipmap/scancode_back" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/scancode_localimg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/scancode_localimg" />
+
+
+        <ToggleButton
+            android:id="@+id/scancode_lamplight"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/scancode_toggle_lamplight"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
